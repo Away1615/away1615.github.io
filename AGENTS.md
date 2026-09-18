@@ -63,6 +63,8 @@ text in Astro components.
 
 Current featured work:
 
+- Rift: UE 5.6 LAN co-op, GAS combat, budget-driven encounters, modular appearance, and report images.
+
 - DX12-FPS: custom renderer, engine architecture, data-driven scenes, and FPS validation.
 - Ray Tracing Renderer: BSDFs, path tracing, NEE/MIS, SAH BVH, and OIDN comparison images.
 - Software Rasterizer: pipeline/SIMD optimization and tile scheduling. Report FPS ratios are
@@ -70,9 +72,9 @@ Current featured work:
 - SkyFire Uprising: six-person UE5 vehicle-combat project; weather and gameplay VFX.
 
 The full archive additionally includes Vampire Survivors Like and TCP Chat Room. `featuredProjects`
-controls homepage selection; all six entries in `projects` have English and Chinese Markdown pages.
+controls homepage selection; all seven entries in `projects` have English and Chinese Markdown pages.
 Images are actual repository outputs/report figures. The rasterizer SVG is a labeled data chart.
-Rift is not yet included in the current site data; do not substitute another project's imagery.
+Rift imagery comes from the four-page WM9M6 report. The source PDF is stored unchanged in the Rift repository at `docs/Rift-Report.pdf`.
 
 Background:
 
@@ -110,7 +112,7 @@ pnpm build
 Before pushing a user-facing change:
 
 1. Run `pnpm check` and `pnpm build`.
-2. Test English and Chinese switching, language persistence, and all six project detail pages.
+2. Test English and Chinese switching, language persistence, and all seven project detail pages.
 3. Check for horizontal overflow at 1440px, 390px, and 320px.
 4. Confirm the resume URL returns successfully.
 5. Keep generated screenshots, `dist`, `.astro`, `node_modules`, and `.pnpm-store` out of Git.

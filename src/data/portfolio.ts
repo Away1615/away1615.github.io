@@ -60,6 +60,111 @@ export function getProjectPath(projectId: string): string {
 }
 
 export const projects: Project[] = [
+{
+  "id": "rift",
+  "title": "Rift",
+  "detailTitle": "Rift",
+  "cardLabel": {
+    "en": "UE5 co-op / combat systems",
+    "zh": "UE5 联机 / 战斗系统"
+  },
+  "mediaClass": "media-rift",
+  "mediaBadge": "RIFT",
+  "mediaHint": {
+    "en": "GAS / LAN co-op",
+    "zh": "GAS / 合作战斗"
+  },
+  "mediaLabel": {
+    "en": "Rift teleport defense gameplay",
+    "zh": "Rift 传送点防守实机画面"
+  },
+  "heroMedia": {
+    "src": "/assets/projects/rift/teleport-objective.png",
+    "width": 1276,
+    "height": 771,
+    "alt": {
+      "en": "Player defending the teleport activation objective",
+      "zh": "玩家在传送点充能期间进行防守"
+    },
+    "caption": {
+      "en": "Report Figure 2: the first-level teleport objective. Unreal Engine development capture.",
+      "zh": "报告图 2：第一关传送点目标，Unreal Engine 开发实机截图。"
+    }
+  },
+  "description": {
+    "en": "A third-person co-op ARPG prototype combining GAS combat, replicated lobby flow, modular appearance, and budget-driven enemy encounters.",
+    "zh": "第三人称合作 ARPG 原型，结合 GAS 战斗、联机大厅、模块化换装与预算驱动的敌人遭遇。"
+  },
+  "tags": [
+    {
+      "label": "C++",
+      "tone": "ue"
+    },
+    {
+      "label": "UE5.6",
+      "tone": "ue"
+    },
+    {
+      "label": "GAS",
+      "tone": "ue"
+    },
+    {
+      "label": "Replication",
+      "tone": "ue"
+    },
+    {
+      "label": "Behavior Tree",
+      "tone": "ue"
+    }
+  ],
+  "github": "https://github.com/Away1615/Rift/tree/develop",
+  "detailType": {
+    "en": "Personal multiplayer project",
+    "zh": "个人联机项目"
+  },
+  "metadata": [
+    {
+      "label": {
+        "en": "Engine",
+        "zh": "引擎"
+      },
+      "value": {
+        "en": "Unreal Engine 5.6",
+        "zh": "Unreal Engine 5.6"
+      }
+    },
+    {
+      "label": {
+        "en": "Platform",
+        "zh": "平台"
+      },
+      "value": {
+        "en": "Windows PC",
+        "zh": "Windows PC"
+      }
+    },
+    {
+      "label": {
+        "en": "Networking",
+        "zh": "联机"
+      },
+      "value": {
+        "en": "LAN / Listen Server",
+        "zh": "LAN / Listen Server"
+      }
+    },
+    {
+      "label": {
+        "en": "Focus",
+        "zh": "重点"
+      },
+      "value": {
+        "en": "Combat / configurable encounters",
+        "zh": "战斗 / 可配置遭遇"
+      }
+    }
+  ]
+},
   {
     "id": "dx12",
     "title": "DX12-FPS",
@@ -807,4 +912,4 @@ export const skillGroups: SkillGroup[] = [
   }
 ];
 
-export const featuredProjects = projects.filter((project) => ["dx12", "raytracing", "rasterizer", "vehicle"].includes(project.id));
+export const featuredProjects = projects.filter((project) => ["rift", "dx12", "raytracing", "rasterizer", "vehicle"].includes(project.id));
