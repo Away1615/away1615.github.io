@@ -2,7 +2,7 @@
 import LogoMark from "../components/LogoMark.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import SocialIcon from "../components/SocialIcon.astro";
-import { experiences, projects, skillGroups } from "../data/portfolio";
+import { experiences, featuredProjects, skillGroups } from "../data/portfolio";
 import { copy } from "../i18n/copy";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
@@ -107,7 +107,7 @@ const education = experiences.filter((experience) => experience.category === "ed
           </h2>
         </header>
         <div class="projects-grid">
-          {projects.map((project, index) => <ProjectCard project={project} index={index} />)}
+          {featuredProjects.map((project, index) => <ProjectCard project={project} index={index} />)}
         </div>
         <a class="project-archive-link reveal" href="/projects/">
           <span data-en={copy.projects.archiveLink.en} data-zh={copy.projects.archiveLink.zh}>

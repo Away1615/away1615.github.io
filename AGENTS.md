@@ -34,10 +34,10 @@ and there is a concrete need.
 - `src/pages/index.astro`: page composition and section order
 - `src/components/SiteHeader.astro`: navigation, language switch, and resume entry
 - `src/components/ProjectCard.astro`: reusable project cards
-- `src/components/ProjectDialog.astro`: native project detail dialogs
+- `src/pages/projects/[id].astro`: bilingual static project detail pages
 - `src/data/portfolio.ts`: authoritative project, experience, and skill data
 - `src/i18n/copy.ts`: authoritative bilingual page copy
-- `src/scripts/site.ts`: language persistence, reveal animation, and dialog interaction
+- `src/scripts/site.ts`: language persistence, reveal animation, and project navigation
 - `src/styles/global.css`: visual system and responsive layout
 - `public/assets/resume/Wei-Dong-Resume-CN.pdf`: current Chinese resume
 - `public/CNAME`: custom GitHub Pages domain
@@ -63,20 +63,24 @@ text in Astro components.
 
 Current featured work:
 
-- Rift: UE5/C++, GAS, LAN multiplayer, replicated combat, AI encounters, and boss phases.
-- DX12-FPS: custom DirectX 12 renderer, HLSL, data-driven levels, gameplay, and GPU instancing.
-- Software Rasterizer: AVX SIMD, multithreading, tile scheduling, and CPU rendering optimization.
-- UE5 Vehicle Combat: six-person team project, gameplay VFX, dynamic weather, Niagara, materials,
-  and a Blueprint-facing C++ particle component.
+- DX12-FPS: custom renderer, engine architecture, data-driven scenes, and FPS validation.
+- Ray Tracing Renderer: BSDFs, path tracing, NEE/MIS, SAH BVH, and OIDN comparison images.
+- Software Rasterizer: pipeline/SIMD optimization and tile scheduling. Report FPS ratios are
+  recalculated from the raw values: 3.97x, 4.58x, and 2.96x for three scenes.
+- SkyFire Uprising: six-person UE5 vehicle-combat project; weather and gameplay VFX.
+
+The full archive additionally includes Vampire Survivors Like and TCP Chat Room. `featuredProjects`
+controls homepage selection; all six entries in `projects` have English and Chinese Markdown pages.
+Images are actual repository outputs/report figures. The rasterizer SVG is a labeled data chart.
+Rift is not yet included in the current site data; do not substitute another project's imagery.
 
 Background:
 
-- MSc Games Engineering at the University of Warwick, 2025-2026.
+- MSc Games Engineering at the University of Warwick, 2025.09-2027.01.
 - iOS Client Engineer at ByteDance, 2021-2024, working on Feishu and Doubao.
 - BSc Software Engineering at Wuhan University of Technology, 2017-2021.
 
-The current English mode still links to the Chinese resume because no English PDF has been
-provided yet.
+Both English and Chinese resume PDFs are available; language switching selects the matching file.
 
 ## Deployment state
 
@@ -106,7 +110,7 @@ pnpm build
 Before pushing a user-facing change:
 
 1. Run `pnpm check` and `pnpm build`.
-2. Test English and Chinese switching, language persistence, and all four project dialogs.
+2. Test English and Chinese switching, language persistence, and all six project detail pages.
 3. Check for horizontal overflow at 1440px, 390px, and 320px.
 4. Confirm the resume URL returns successfully.
 5. Keep generated screenshots, `dist`, `.astro`, `node_modules`, and `.pnpm-store` out of Git.
@@ -118,7 +122,7 @@ Pushes to `main` publish directly to production, so commit only validated work.
 1. Continue polishing Chinese and English copy without changing the established structure.
 2. Replace media placeholders with authentic project screenshots, gameplay GIFs, or video covers.
 3. Replace the `WD` header mark with the user's personal icon when the source asset is provided.
-4. Add a separate English resume and select the correct PDF for each language.
+4. Keep both resume PDFs and their language-specific links up to date.
 5. Verify HTTPS enforcement and root/`www` redirects after certificate propagation completes.
 
 Keep changes scoped. Do not invent project facts, performance numbers, screenshots, employment

@@ -27,10 +27,10 @@ export const copy = {
       "正在寻找 UE5 Gameplay 与游戏客户端开发机会"
     ),
     title: localized("Wei Dong", "董伟"),
-    role: localized("UE5 Gameplay & Game Client Programmer", "UE5 Gameplay / 游戏客户端程序员"),
+    role: localized("UE5 Gameplay & Game Client Programmer", "UE5 玩法 / 游戏客户端开发"),
     summary: localized(
-      "I value clear engineering design, long-term extensibility, and implementations that are both simple and elegant.",
-      "我重视清晰的工程设计、长期可扩展性，以及简洁而优雅的实现。"
+      "Three years of commercial client engineering. MSc Games Engineering at Warwick. Building C++ game systems, renderers, and Unreal Engine gameplay.",
+      "三年商业客户端研发经验，华威大学游戏工程硕士在读，专注 C++ 游戏系统、图形渲染与 Unreal Engine 玩法开发。"
     ),
     resume: localized("View resume", "查看简历"),
     projects: localized("Projects", "项目")
@@ -55,7 +55,7 @@ export const copy = {
     )
   },
   projects: {
-    eyebrow: localized("Projects", "项目"),
+    eyebrow: localized("Selected projects", "精选项目"),
     details: localized("View details", "查看详情"),
     archiveLink: localized("View Full Project Archive", "查看完整项目列表")
   },

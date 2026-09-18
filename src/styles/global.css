@@ -1878,3 +1878,14 @@ h1 {
     padding-inline: 0;
   }
 }
+
+/* Project evidence: preserve diagrams and let real captures lead the cards. */
+@media (min-width: 981px) { .project-media { min-height: 196px; } }
+.project-media-image { opacity: 1; }
+.project-media.has-image::after { background: linear-gradient(180deg, transparent 30%, rgba(8, 13, 24, .78)); }
+.project-card:hover .project-media-image { opacity: 1; }
+.project-source-link { display: inline-flex; margin-top: 18px; gap: 8px; }
+.project-detail-figure img { height: auto; object-fit: contain; }
+.project-markdown table { display: block; overflow-x: auto; max-width: 100%; }
+
+.media-rasterizer .project-media-image { object-fit: contain; background: #101c28; }

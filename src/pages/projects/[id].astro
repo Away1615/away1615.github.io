@@ -65,6 +65,11 @@ const pageTitle = localized(`${project.detailTitle} - Wei Dong`, `${project.deta
       <ul class="tag-list" aria-label={`${project.title} technologies`}>
         {project.tags.map((tag) => <li class="tag">{tag.label}</li>)}
       </ul>
+      {project.github && (
+        <a class="text-link project-source-link" href={project.github} target="_blank" rel="noreferrer">
+          <span data-en="Source & README" data-zh="源码与 README">Source &amp; README</span><span aria-hidden="true"> ↗</span>
+        </a>
+      )}
     </header>
 
     {project.heroMedia ? (
